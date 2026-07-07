@@ -1,0 +1,9 @@
+#!name=Usage Reset Plugin Example
+#!desc=修改 example.com/example 的使用量限制
+#!author=Self
+
+[Script]
+http-response ^http(s)?://notability\.com/global requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/DeckryZ/notability/refs/heads/main/change.js
+
+[MitM]
+hostname = notability.com
